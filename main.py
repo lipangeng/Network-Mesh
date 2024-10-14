@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 def get_wireguard_runtime_info():
     """通过wg show命令获取Wireguard runtime info信息"""
-    result = subprocess.run(WG_COMMAND, capture_output=True, text=True)
+    result = subprocess.run(WG_COMMAND.split(), capture_output=True, text=True)
     peers_info = result.stdout
     return peers_info
 
