@@ -1,8 +1,6 @@
-name: Discover Build
+name: Build
 on:
   push:
-    paths:
-      - discover
 jobs:
   build:
     runs-on: ubuntu-latest
